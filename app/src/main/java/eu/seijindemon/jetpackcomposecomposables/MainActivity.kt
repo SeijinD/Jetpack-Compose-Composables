@@ -26,17 +26,21 @@ fun NavigationComponent() {
     val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = "home") {
-        composable("home") { HomeScreen(navController = navController, directions = listOfDirections()) }
+        composable(route = "home") { HomeScreen(navController = navController, directions = listOfDirections()) }
+//        composable(route = "") {}
+//        composable(route = "") {}
+//        composable(route = "") {}
+//        composable(route = "") {}
     }
 }
 
 fun listOfDirections(): MutableList<Pair<String, String>> {
     val listOfDirections: MutableList<Pair<String, String>> = mutableListOf()
 
-    listOfDirections.add(Pair("", ""))
-    listOfDirections.add(Pair("", ""))
-    listOfDirections.add(Pair("", ""))
-    listOfDirections.add(Pair("", ""))
+    listOfDirections.add(Pair("1", ""))
+    listOfDirections.add(Pair("2", ""))
+    listOfDirections.add(Pair("3", ""))
+    listOfDirections.add(Pair("4", ""))
 
 
     return listOfDirections
