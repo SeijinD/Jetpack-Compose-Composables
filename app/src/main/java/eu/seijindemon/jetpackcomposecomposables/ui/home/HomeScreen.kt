@@ -41,9 +41,10 @@ fun HomeCard(navController: NavController, direction: Pair<String, String>) {
         modifier = Modifier
             .fillMaxWidth()
             .background(color = Color.DarkGray, shape = RoundedCornerShape(8.dp))
+            .clickable { navController.navigate(direction.second) }
     ) {
         Text(
-            modifier = Modifier.clickable { navController.navigate(direction.second) },
+            modifier = Modifier.padding(all = 8.dp),
             text = direction.first,
             fontWeight = FontWeight.SemiBold,
             fontSize = 20.sp,
