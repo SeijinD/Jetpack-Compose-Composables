@@ -26,7 +26,11 @@ fun ButtonScreen(title: String) {
             fontSize = 20.sp,
             color = Color.DarkGray
         )
-
+        Button1()
+        OutlinedButton1()
+        TextButton1()
+        IconButton1()
+        IconToggleButton1()
     }
 }
 
