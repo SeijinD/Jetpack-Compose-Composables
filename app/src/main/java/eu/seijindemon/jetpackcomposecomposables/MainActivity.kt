@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import eu.seijindemon.jetpackcomposecomposables.ui.composables.button.ButtonsScreen
 import eu.seijindemon.jetpackcomposecomposables.ui.home.HomeScreen
 import eu.seijindemon.jetpackcomposecomposables.ui.theme.JetpackComposeComposablesTheme
 
@@ -27,7 +28,7 @@ fun NavigationComponent() {
 
     NavHost(navController = navController, startDestination = "home") {
         composable(route = "home") { HomeScreen(navController = navController, directions = listOfDirections()) }
-//        composable(route = "") {}
+        composable(route = "buttons") { ButtonsScreen() }
 //        composable(route = "") {}
 //        composable(route = "") {}
 //        composable(route = "") {}
@@ -37,7 +38,7 @@ fun NavigationComponent() {
 fun listOfDirections(): MutableList<Pair<String, String>> {
     val listOfDirections: MutableList<Pair<String, String>> = mutableListOf()
 
-    listOfDirections.add(Pair("1", ""))
+    listOfDirections.add(Pair("Buttons", "buttons"))
     listOfDirections.add(Pair("2", ""))
     listOfDirections.add(Pair("3", ""))
     listOfDirections.add(Pair("4", ""))
