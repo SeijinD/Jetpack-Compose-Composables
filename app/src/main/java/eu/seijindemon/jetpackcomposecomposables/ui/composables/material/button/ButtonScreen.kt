@@ -1,4 +1,4 @@
-package eu.seijindemon.jetpackcomposecomposables.ui.composables.button
+package eu.seijindemon.jetpackcomposecomposables.ui.composables.material.button
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Text
@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun ButtonsScreen() {
+fun ButtonScreen(title: String) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -21,7 +21,7 @@ fun ButtonsScreen() {
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         Text(
-            text = "Buttons",
+            text = title,
             fontWeight = FontWeight.SemiBold,
             fontSize = 20.sp,
             color = Color.DarkGray
@@ -32,6 +32,6 @@ fun ButtonsScreen() {
 
 @Preview( showBackground = true)
 @Composable
-fun ButtonsScreenPreview() {
-    ButtonsScreen()
+fun ButtonScreenPreview() {
+    ButtonScreen(title = "Buttons")
 }
