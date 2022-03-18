@@ -31,6 +31,7 @@ fun TextScreen(title: String) {
         Text3()
         Text4()
         Text5()
+        Text6()
     }
 }
 
