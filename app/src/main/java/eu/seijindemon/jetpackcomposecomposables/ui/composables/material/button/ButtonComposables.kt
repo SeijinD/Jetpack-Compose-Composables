@@ -6,7 +6,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
@@ -50,7 +50,26 @@ fun IconButton1() {
 
 @Composable
 fun IconToggleButton1() {
-    IconToggleButton(checked = false, onCheckedChange = {}) {
-        Text(text = "IconToggleButton")
+    var state by remember { mutableStateOf(false) }
+    IconToggleButton(checked = false, onCheckedChange = { state = !state }) {
+        if (state) {
+            Icon(
+                modifier = Modifier
+                    .background(color = Color.Gray, shape = RoundedCornerShape(8.dp))
+                    .padding(all = 8.dp),
+                imageVector = Icons.Filled.Favorite,
+                contentDescription = "Localized description",
+                tint = Color.Red
+            )
+        } else {
+            Icon(
+                modifier = Modifier
+                    .background(color = Color.Gray, shape = RoundedCornerShape(8.dp))
+                    .padding(all = 8.dp),
+                imageVector = Icons.Filled.Favorite,
+                contentDescription = "Localized description",
+                tint = Color.Blue
+            )
+        }
     }
 }
