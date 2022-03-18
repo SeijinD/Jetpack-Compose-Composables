@@ -51,7 +51,7 @@ fun IconButton1() {
 @Composable
 fun IconToggleButton1() {
     var state by remember { mutableStateOf(false) }
-    IconToggleButton(checked = false, onCheckedChange = { state = !state }) {
+    IconToggleButton(checked = state, onCheckedChange = { state = !state }) {
         if (state) {
             Icon(
                 modifier = Modifier
