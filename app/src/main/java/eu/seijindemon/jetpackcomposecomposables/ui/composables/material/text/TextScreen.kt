@@ -26,7 +26,11 @@ fun TextScreen(title: String) {
             fontSize = 20.sp,
             color = Color.DarkGray
         )
-
+        Text1()
+        Text2()
+        Text3()
+        Text4()
+        Text5()
     }
 }
 
